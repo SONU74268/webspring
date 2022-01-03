@@ -13,7 +13,7 @@
 	<groupId>com.demo</groupId>
 	<artifactId>webspring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>webspring</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -40,6 +40,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
