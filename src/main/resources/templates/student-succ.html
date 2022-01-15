@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Spring Demo</title>
+</head>
+
+<body>
+    <h1>Welcome...</h1>
+    <br />
+    <hr />
+    <div th:object="${student}">
+        Hello <span th:text="*{name}">sonu</span>. This is the msg to show you
+        your age and sex.
+        <br />
+        Name : <span th:text="*{name}">sonu</span>.
+        <br />
+        Age : <span th:text="*{age}">21</span>.
+        <br />
+        Sex : <span th:text="*{sex}">male</span>.
+        <br />
+        Email : <span th:text="*{email}">demo@mail.com</span>.
+        <br />
+        Password : <span th:text="*{password}">*******</span>.
+        <br />
+        BirthDate : <span th:text="*{birthdate}">21/03/2001</span>.
+        <br />
+        Graduate : <span th:text="*{graduate}">yes/no</span>.
+        <br />
+        Profession : <span th:text="*{profession}">stream</span>.
+        <br />
+        Note : <span th:text="*{note}">dummy note</span>.
+        <hr />
+    </div>
+</body>
+
+</html>

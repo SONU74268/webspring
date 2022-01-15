@@ -42,12 +42,12 @@ public class DemoController {
     // process form for showing student data using request parm post method
     @RequestMapping(value = "/processformstudent", method = RequestMethod.POST)
     public String requestMethodName(@RequestParam Map<String, String> param, Model model) {
-        Student student = new Student();
-        student.setName(param.get("name"));
-        student.setAge(Integer.parseInt(param.get("age")));
-        student.setSex(param.get("sex"));
-        System.out.println(student.toString());
-        model.addAttribute("Student", student);
+        // Student student = new Student();
+        // student.setName(param.get("name"));
+        // student.setAge(param.get("age"));
+        // student.setSex(param.get("sex"));
+        // System.out.println(student.toString());
+        // model.addAttribute("Student", student);
         return "studentdetail";
     }
 
