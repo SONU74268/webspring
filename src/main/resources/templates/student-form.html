@@ -3,14 +3,20 @@
 
 <head>
     <title>Student Registrtion Form</title>
+    <style>
+        .errorclassmsg {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 style="align-items: center;">Student Form</h1>
+    <h1 style="align-items: center; color: blue;">Student Form</h1>
     <br />
     <hr />
     <form th:action="@{/student-registration}" th:object="${student}" method="post">
         Name : <input type="text" placeholder="Enter your name" th:field="*{name}" /><br />
+        <p th:if="${#fields.hasErrors('name')}" th:errorclass="errorclassmsg" th:errors="*{name}">Name length must be greather than 3</p>
 
         Email : <input type="email" placeholder="Email" th:field="*{email}" /><br />
 
@@ -30,6 +36,7 @@
         </select><br>
 
         Note : <textarea th:field="*{note}" cols="30" rows="10"></textarea>
+        <p th:if="${#fields.hasErrors('note')}" th:errorclass="errorclassmsg" th:errors="*{note}">happy to have note</p>
         <input type="submit" value="submit" />
     </form>
 </body>
