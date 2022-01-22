@@ -2,15 +2,46 @@ package com.demo.webspring.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "student")
 public class Student {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
+    
+    @Column(name = "birth_date")
     private Date birthdate;
+
+    @Column(name = "age")
     private String age;
+
+    @Column(name = "sex")
     private String sex;
+
+    @Column(name = "graduate")
     private boolean graduate;
+
+    @Column(name = "profession")
     private String profession;
+
+    @Column(name = "note")
     private String note;
 
     @Override

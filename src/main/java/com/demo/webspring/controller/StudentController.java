@@ -3,8 +3,6 @@ package com.demo.webspring.controller;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.validation.Valid;
-
 import com.demo.webspring.model.Student;
 
 import org.springframework.stereotype.Controller;
@@ -27,7 +25,7 @@ public class StudentController {
     }
 
     @PostMapping("/student-registration")
-    public String studentReg(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult) {
+    public String studentReg(@ModelAttribute("student") Student student, BindingResult bindingResult) {
         System.out.println(student);
         return "student-succ";
     }
